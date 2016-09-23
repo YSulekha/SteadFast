@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="photo_placeholder">#ccc</color>
+    <color name="theme_primary">#F44336</color>
+    <color name="theme_primary_dark">#D32F2F</color>
+    <color name="theme_accent">#04A748</color>
+    <color name="meta_bar_color">#333</color>
+    <color name="color_white">#FFF</color>
+</resources>
