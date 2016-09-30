@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="48dp"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageButton
+                android:id="@+id/dialog_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="insertNewRecord"
+                android:src="@drawable/ic_save_yellow_a700_48dp"
+                />
+
+            <ImageButton
+                android:id="@+id/dialog_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:onClick="deleteRecord"
+                android:src="@drawable/ic_delete_yellow_a700_48dp"
+               />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/dialog_task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:capitalize="words"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginBottom="12dp"
+            android:textColorHint="#69090105"
+            android:textColor="@color/cardview_dark_background" />
+
+
+
+        <EditText
+            android:id="@+id/dialog_task_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:editable="false"
+            android:layout_marginBottom="12dp"
+            android:focusableInTouchMode="false"
+            android:hint="Date"
+            android:textColorHint="#69090105"
+            android:onClick="getDate"
+            android:textColor="@color/cardview_dark_background" />
+
+        <EditText
+            android:id="@+id/dialog_task_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginBottom="24dp"
+            android:textColorHint="#69090105"
+            android:textColor="@color/cardview_dark_background" />
+
+        <Spinner
+            android:id="@+id/dialog_task_priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#69090105"
+            android:textColor="@color/cardview_dark_background"
+            android:layout_gravity="left"
+            android:gravity="left" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="32dp"
+            android:background="@android:color/darker_gray"/>
+        <Spinner
+            android:id="@+id/dialog_task_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/meta_bar_color"
+            android:textColor="@color/cardview_dark_background" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="48dp"
+            android:background="@android:color/darker_gray"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+</ScrollView>

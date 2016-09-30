@@ -41,6 +41,9 @@ public class TaskContract {
         //Todo date
         public static final String COLUMN_TASK_DATE = "date";
 
+        //Task Notes
+        public static final String COLUMN_TASK_NOTES = "notes";
+
         public static long normalizeDate(long startDate) {
             // normalize the start date to the beginning of the (UTC) day
             Time time = new Time();
@@ -55,11 +58,11 @@ public class TaskContract {
         }
 
         public static Uri buildUriWithNameAndDate(long date, String name){
-            return CONTENT_URI.buildUpon().appendPath(name).appendPath(Long.toString(normalizeDate(date))).build();
+            return CONTENT_URI.buildUpon().appendPath(name).appendPath(Long.toString(date)).build();
         }
 
         public static Uri buildUriWithDate(long date){
-            return CONTENT_URI.buildUpon().appendPath(Long.toString(normalizeDate(date))).build();
+            return CONTENT_URI.buildUpon().appendPath(Long.toString(date)).build();
         }
 
         public static String getTaskNameFromUri(Uri uri){

@@ -28,6 +28,7 @@ public class TaskdbHelper extends SQLiteOpenHelper {
                 TaskContract.TaskEntry.COLUMN_TASK_NAME+" TEXT NOT NULL,"+
                 TaskContract.TaskEntry.COLUMN_TASK_DATE+" INTEGER NOT NULL,"+
                 TaskContract.TaskEntry.COLUMN_TASK_PRIORITY+" TEXT NOT NULL,"+
+                 TaskContract.TaskEntry.COLUMN_TASK_NOTES+" TEXT,"+
                 TaskContract.TaskEntry.COLUMN_TASK_STATUS+" TEXT NOT NULL );";
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE);
     }

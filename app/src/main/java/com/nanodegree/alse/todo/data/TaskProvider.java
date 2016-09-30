@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.util.Log;
 
 /**
  * ContentProvider class for Todo DB
@@ -51,6 +52,7 @@ public class TaskProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String s, String[] strings1, String sort) {
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
         int match = sUriMatcher.match(uri);
+        Log.v("ContentProvider_query",String.valueOf(match));
         Cursor retCursor;
         switch (match){
             case TASK:
@@ -94,7 +96,9 @@ public class TaskProvider extends ContentProvider {
     @Override
     public Uri insert(Uri uri, ContentValues contentValues) {
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
+        Log.v("Inside insert","ContentProvider");
         int match = sUriMatcher.match(uri);
+        Log.v("Inside insert",String.valueOf(match));
         Uri retUri;
         switch (match){
             case TASK:
@@ -121,7 +125,7 @@ public class TaskProvider extends ContentProvider {
         int retValue;
         switch (match) {
             case TASK:
-                retValue = db.delete(TaskContract.TaskEntry.TABLE_NAME,selection,selectionArgs);
+                retValue = db.delete(TaskContract.TaskEntry.TABLE_NAME, selection, selectionArgs);
                 break;
             default:
                 throw new UnsupportedOperationException("Unknown Uri" + uri);
