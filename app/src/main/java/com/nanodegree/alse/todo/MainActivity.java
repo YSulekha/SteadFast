@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.nanodegree.alse.todo.Adapter.RecyclerAdapter;
 import com.nanodegree.alse.todo.data.TaskContract;
@@ -21,17 +22,20 @@ public class MainActivity extends AppCompatActivity implements android.app.Loade
 
     RecyclerAdapter mRecyclerAdapter;
     static final int LOADER_ID = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        mRecyclerAdapter = new RecyclerAdapter(this);
+        TextView textView = (TextView)findViewById(R.id.recyclerview_emptyView);
+        mRecyclerAdapter = new RecyclerAdapter(this,textView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(mRecyclerAdapter);
         getLoaderManager().initLoader(LOADER_ID, null, this);
 
+        //Add notes button
         FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.add_todo);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

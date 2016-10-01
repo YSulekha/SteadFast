@@ -1,75 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    >
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin = "@dimen/keyline_margin"
-    android:focusable="true"
-    app:cardBackgroundColor="@color/color_white"
-    app:cardElevation="@dimen/card_elevation"
-    app:cardCornerRadius="3dp"
+    android:layout_marginBottom="8dp">
 
-    android:foreground="?android:attr/selectableItemBackground"
-    android:stateListAnimator="@anim/fab_state_list_anim"
-    >
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:minHeight="?android:attr/listPreferredItemHeight"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
-        android:paddingRight="@dimen/abc_list_item_padding_horizontal_material">
-        <TextView
-            android:id="@+id/rec_todo_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
-            android:text="169"
-            android:gravity="left"
-            android:textStyle="bold"
-            android:layout_marginRight="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            />
+        android:layout_margin="@dimen/keyline_margin"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:stateListAnimator="@anim/fab_state_list_anim"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="@dimen/card_elevation">
 
-        <LinearLayout
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="8dp">
+            android:gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingRight="@dimen/abc_list_item_padding_horizontal_material">
 
             <TextView
-                android:id="@+id/rec_todo_priority"
+                android:id="@+id/rec_todo_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold" />
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Saturday"
-                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                />
+                android:orientation="vertical"
+                android:paddingLeft="8dp">
 
-            <TextView
-                android:id="@+id/rec_todo_status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                android:text="Clear"
-                android:layout_gravity="right" />
+                <TextView
+                    android:id="@+id/rec_todo_priority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    />
 
+                <TextView
+                    android:id="@+id/rec_todo_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            </LinearLayout>
         </LinearLayout>
-
-
-    </LinearLayout>
-
-</android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
 </FrameLayout>

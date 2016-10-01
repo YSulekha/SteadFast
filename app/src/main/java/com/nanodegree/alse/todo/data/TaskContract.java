@@ -20,7 +20,7 @@ public class TaskContract {
     //path to be added to Uri of content provider
     public static final String PATH_TASK = "task";
 
-    public static final class TaskEntry implements BaseColumns{
+    public static final class TaskEntry implements BaseColumns {
 
 
         public static final Uri CONTENT_URI =
@@ -57,23 +57,23 @@ public class TaskContract {
             return ContentUris.withAppendedId(CONTENT_URI, id);
         }
 
-        public static Uri buildUriWithNameAndDate(long date, String name){
+        public static Uri buildUriWithNameAndDate(long date, String name) {
             return CONTENT_URI.buildUpon().appendPath(name).appendPath(Long.toString(date)).build();
         }
 
-        public static Uri buildUriWithDate(long date){
+        public static Uri buildUriWithDate(long date) {
             return CONTENT_URI.buildUpon().appendPath(Long.toString(date)).build();
         }
 
-        public static String getTaskNameFromUri(Uri uri){
+        public static String getTaskNameFromUri(Uri uri) {
             return uri.getPathSegments().get(1);
         }
 
-        public static long getDateFromUriWithTaskName(Uri uri){
+        public static long getDateFromUriWithTaskName(Uri uri) {
             return Long.parseLong(uri.getPathSegments().get(2));
         }
 
-        public static long getDateFromUri(Uri uri){
+        public static long getDateFromUri(Uri uri) {
             return Long.parseLong(uri.getPathSegments().get(1));
         }
 

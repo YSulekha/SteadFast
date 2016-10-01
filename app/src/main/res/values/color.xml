@@ -6,7 +6,7 @@
     <color name="theme_accent">#D1A63F</color>
     <color name="meta_bar_color">#333</color>
     <color name="color_white">#FFF</color>
-    <color name ="tile">#008080</color>
     <color name="orange">#F1FA5F21</color>
     <color name="yellow">#D1A63F</color>
+    <color name="date_background">#aa2f1307</color>
 </resources>

@@ -56,7 +56,6 @@ android:layout_height="match_parent"
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="16dp"
         android:id="@+id/recyclerView"
         android:background="#FFFF"
         android:fitsSystemWindows="true"
@@ -64,6 +63,20 @@ android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
        >
     </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/recyclerview_emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingEnd="16dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingStart="16dp"
+        android:paddingTop="290dp"
+        android:text="@string/empty_fetch_data"
+        android:textColor="@color/theme_primary"
+        android:textSize="22sp"/>
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
