@@ -12,7 +12,7 @@
    <string name = "save_text">Save Task</string>
     <string name="delete_text">Delete Task</string>
     <string name="text_required">Required</string>
-    <string name="record_deleted">Record Deleted</string>
+    <string name="record_deleted">Task Deleted</string>
 
     <string-array name="priority_levels">
         <item>Low</item>
